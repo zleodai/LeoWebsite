@@ -38,17 +38,28 @@ body {
   font-family: 'Montserrat', Arial, sans-serif;
   color: var(--text);
   background: var(--bg);
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+html,
+body,
+#root {
+  min-height: 100%;
+  width: 100%;
 }
 
 .App {
   min-height: 100vh;
+  width: 100%;
   background:
     linear-gradient(to bottom, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0)),
     repeating-linear-gradient(to bottom, rgba(255, 255, 255, 0.04) 0, rgba(255, 255, 255, 0.04) 1px, transparent 1px, transparent 3px),
-    radial-gradient(circle at 15% 10%, rgba(127, 255, 127, 0.08), transparent 40%),
+  radial-gradient(circle at 15% 10%, rgba(127, 255, 127, 0.08), transparent 40%),
     #090d08;
   position: relative;
-  overflow: hidden;
+  overflow-x: hidden;
+  overflow-y: visible;
   padding: 1rem 1rem 2.2rem;
 }
 
@@ -200,7 +211,6 @@ p {
   display: inline-block;
   overflow: hidden;
   white-space: nowrap;
-  animation: caretBlink 0.95s step-end infinite;
   padding-right: 4px;
 }
 
