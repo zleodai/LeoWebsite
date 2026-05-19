@@ -1,0 +1,112 @@
+{
+  "technicalProjects": [
+    {
+      "id": "telemetry-collector-analyzer",
+      "title": "Telemetry Collector / Analyzer",
+      "type": "Data pipeline",
+      "link": "https://github.com/zleodai/FSAESoftware",
+      "stack": ["Python", "Go", "C#", "Unity"],
+      "skillIds": ["python", "go", "csharp", "unity", "apis", "data-pipelines"],
+      "description": "Built a real-time pipeline for racing-simulator telemetry, moving data from a Python collector through a Go service into a Unity-based analysis interface.",
+      "bullets": [
+        "Collected live simulator data through a custom Python plugin.",
+        "Used a Go server to store and transfer telemetry to a frontend application.",
+        "Visualized vehicle position on a virtual track with supporting charts for analysis."
+      ]
+    },
+    {
+      "id": "autonomous-racing-agent",
+      "title": "Autonomous Racing Agent",
+      "type": "Reinforcement learning",
+      "link": "https://law47.github.io/AutonomousRacingAgent/",
+      "stack": ["Python", "PyTorch", "SAC", "Assetto Corsa", "ViGEmBus"],
+      "skillIds": [
+        "python",
+        "pytorch",
+        "reinforcement-learning",
+        "data-pipelines"
+      ],
+      "description": "Built a reinforcement learning racing agent using Soft Actor-Critic to autonomously drive Assetto Corsa from simulator telemetry.",
+      "bullets": [
+        "Trained a PyTorch SAC agent to hot lap Monza in the BMW Z4 GT3 using raw simulator telemetry rather than vision or map input.",
+        "Engineered a real-time pipeline that syncs model inference to 30 Hz physics packets read through shared memory.",
+        "Injected steering, throttle, brake, and gear-control outputs through a ViGEmBus virtual gamepad driver.",
+        "Documented 14+ training runs, including reward-shaping experiments, behavior cloning attempts, and a best valid lap of 1:54.127."
+      ]
+    },
+    {
+      "id": "realtime-procedural-generation",
+      "title": "Realtime Procedural Generation",
+      "type": "Real-time rendering",
+      "stack": ["C#", "Unity Terrain"],
+      "skillIds": ["csharp", "unity"],
+      "description": "Built a continuous terrain generation system that streams 3D environment data during play without major performance stutter.",
+      "bullets": [
+        "Generated terrain at runtime with responsive chunk updates.",
+        "Focused on smooth frame behavior while new world data entered the scene."
+      ]
+    }
+  ],
+  "gameProjects": [
+    {
+      "id": "walls-werent-always-red",
+      "title": "The Walls Weren't Always Red",
+      "link": "https://law47.itch.io/the-walls-werent-always-red",
+      "cover": "https://img.itch.zone/aW1nLzI1NzU2MDk2LnBuZw==/315x250%23c/9Yq5Wf.png",
+      "skillIds": ["csharp", "unity"],
+      "description": "A puzzle-horror concept with evolving color-based navigation and tension pacing.",
+      "bullets": [
+        "Built and polished a playable puzzle-horror concept under jam constraints.",
+        "Focused on readable interaction loops, pacing, and responsive Unity implementation."
+      ]
+    },
+    {
+      "id": "photophobic-teyeme",
+      "title": "Photophobic Teyeme",
+      "link": "https://law47.itch.io/photophobic-teyeme",
+      "cover": "https://img.itch.zone/aW1nLzIzNjkwNzIwLnBuZw==/315x250%23c/491s4R.png",
+      "skillIds": ["csharp", "unity"],
+      "description": "A dark ambient prototype where fear mechanics and uncertainty shape every play decision.",
+      "bullets": [
+        "Implemented interactive horror mechanics that react to player movement and visibility.",
+        "Tuned atmosphere and feedback loops for rapid prototype playability."
+      ]
+    },
+    {
+      "id": "ralcoop",
+      "title": "RALCOOP",
+      "link": "https://law47.itch.io/ralcoop",
+      "cover": "https://img.itch.zone/aW1nLzIyNTMyMTQ5LnBuZw==/315x250%23c/5wVbQi.png",
+      "skillIds": ["csharp", "unity"],
+      "description": "A co-op experiment focused on synced timing and team-driven movement loops.",
+      "bullets": [
+        "Built team-oriented movement interactions for a playable co-op prototype.",
+        "Collaborated on scope and implementation during a short production cycle."
+      ]
+    },
+    {
+      "id": "unstable",
+      "title": "Unstable",
+      "link": "https://law47.itch.io/unstable",
+      "cover": "https://img.itch.zone/aW1nLzE4NTM3NDkxLnBuZw==/315x250%23c/iN2bVF.png",
+      "skillIds": ["csharp", "unity"],
+      "description": "A gameplay loop that escalates risk and rewards as systems destabilize.",
+      "bullets": [
+        "Implemented escalating gameplay behavior around changing system states.",
+        "Balanced moment-to-moment feedback for a compact playable loop."
+      ]
+    },
+    {
+      "id": "smainter-smail",
+      "title": "Smainter Smail",
+      "link": "https://law47.itch.io/smainter-smail",
+      "cover": "https://img.itch.zone/aW1nLzE3NDQwMTcwLnBuZw==/315x250%23c/y7X99T.png",
+      "skillIds": ["csharp", "unity"],
+      "description": "A fast-paced, satirical action piece blending delivery mechanics with chaotic timing.",
+      "bullets": [
+        "Built time-sensitive action mechanics with responsive player feedback.",
+        "Shipped a compact playable demo with a clear arcade-style loop."
+      ]
+    }
+  ]
+}

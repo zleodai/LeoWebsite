@@ -1,0 +1,163 @@
+{
+  "meta": {
+    "title": "Leo Dai | Software Engineer",
+    "description": "Leo Dai is a Los Angeles software engineer focused on backend data tools, telemetry systems, and real-time interactive software."
+  },
+  "typing": {
+    "speedMs": 42
+  },
+  "nav": {
+    "brand": "$ leo dai",
+    "links": [
+      { "label": "about", "href": "#about" },
+      { "label": "skills", "href": "#skills" },
+      { "label": "projects", "href": "#projects" },
+      { "label": "experience", "href": "#experience" },
+      { "label": "education", "href": "#education" },
+      { "label": "contact", "href": "#contact" }
+    ]
+  },
+  "hero": {
+    "eyebrow": "> software_engineer",
+    "name": "Leo Dai",
+    "tagline": "software engineer | real-time systems + data tools",
+    "summary": "MS Computer Science student in Los Angeles building backend/data tools, telemetry systems, and interactive software with Python, Go, C#, and Unity.",
+    "highlightSkillIds": [],
+    "actions": [
+      {
+        "label": "resume",
+        "href": "/2026%20Resume.pdf",
+        "download": "2026 Resume.pdf",
+        "variant": "primary"
+      },
+      {
+        "label": "linkedin",
+        "href": "https://www.linkedin.com/in/leo-dai-5a729623a/",
+        "external": true,
+        "variant": "ghost"
+      }
+    ]
+  },
+  "sections": {
+    "skills": {
+      "id": "skills",
+      "title": "skills",
+      "description": ""
+    },
+    "technicalProjects": {
+      "id": "projects",
+      "title": "technical projects",
+      "description": ""
+    },
+    "gameProjects": {
+      "title": "playable game work",
+      "description": "mostly from Game Jams"
+    },
+    "experience": {
+      "id": "experience",
+      "title": "experience",
+      "description": ""
+    },
+    "education": {
+      "id": "education",
+      "title": "education",
+      "description": ""
+    },
+    "contact": {
+      "id": "contact",
+      "title": "contact",
+      "description": "Open to software engineering and quality assurance internships/jobs in Los Angeles or remote"
+    }
+  },
+  "skills": [
+    { "id": "python", "label": "Python" },
+    { "id": "pytorch", "label": "PyTorch" },
+    { "id": "reinforcement-learning", "label": "Machine Learning" },
+    { "id": "go", "label": "Go" },
+    { "id": "csharp", "label": "C#" },
+    { "id": "cpp", "label": "C++" },
+    { "id": "unity", "label": "Unity" },
+    { "id": "unreal", "label": "Unreal Engine" },
+    { "id": "apis", "label": "APIs" },
+    { "id": "data-pipelines", "label": "Data Pipelines" }
+  ],
+  "workExperience": [
+    {
+      "id": "well-frog-technical-developer",
+      "company": "Well Frog Studios LLC",
+      "role": "Technical Developer",
+      "period": "Sept 2025 - Dec 2025",
+      "skillIds": ["csharp", "unity"],
+      "bullets": [
+        "Developed data-oriented gameplay systems in Unity ECS using C# to support large numbers of interactive entities.",
+        "Rebuilt a web demo into a mobile-focused Unity experience in direct collaboration with the product manager.",
+        "Implemented interactive particle features for dynamic user-created scenes."
+      ]
+    },
+    {
+      "id": "arkenzo-technical-designer",
+      "company": "Arkenzo Interactive",
+      "role": "Technical Designer",
+      "period": "May 2024 - Aug 2024",
+      "skillIds": ["cpp", "unreal"],
+      "bullets": [
+        "Developed C++ gameplay prototypes in Unreal Engine to validate mechanics and production direction.",
+        "Collaborated with peers to scope, test, and iterate on gameplay systems under internship timelines."
+      ]
+    },
+    {
+      "id": "target-general-merchandise",
+      "company": "Target",
+      "role": "General Merchandise Expert",
+      "period": "Oct 2021 - Present",
+      "skillIds": [],
+      "bullets": [
+        "Trusted retail associate with experience in customer service, sales floor operations, and inventory management.",
+        "Trained new team members on floor operations, opening and closing procedures, and customer service standards."
+      ]
+    }
+  ],
+  "education": [
+    {
+      "school": "Loyola Marymount University",
+      "degree": "Master of Science in Computer Science",
+      "period": "Expected Dec 2026"
+    },
+    {
+      "school": "Loyola Marymount University",
+      "degree": "Bachelor of Science in Computer Science",
+      "period": "Dec 2025"
+    }
+  ],
+  "contactLinks": [
+    {
+      "label": "Email",
+      "value": "awsomeleodai@gmail.com",
+      "href": "mailto:awsomeleodai@gmail.com"
+    },
+    {
+      "label": "LinkedIn",
+      "value": "linkedin.com/in/leo-dai-5a729623a",
+      "href": "https://www.linkedin.com/in/leo-dai-5a729623a/",
+      "external": true
+    },
+    {
+      "label": "Phone",
+      "value": "818-647-8358",
+      "external": true
+    }
+  ],
+  "overlay": {
+    "eyebrow": "skill details",
+    "closeLabel": "close",
+    "projectsTitle": "Projects",
+    "experienceTitle": "Work Experience",
+    "emptyMessage": "No projects or work experience are currently tagged with this skill."
+  },
+  "labels": {
+    "technologies": "Technologies",
+    "relatedSkills": "Related skills",
+    "openProject": "Open project",
+    "separator": " | "
+  }
+}
