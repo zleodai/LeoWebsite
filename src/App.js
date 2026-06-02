@@ -293,6 +293,29 @@ function PortfolioApp({ siteContent, projectContent }) {
           </div>
         </section>
 
+        <section id={siteContent.sections.experience.id} className="PageSection">
+          <div className="sectionInner">
+            <SectionHeader title={siteContent.sections.experience.title} description={siteContent.sections.experience.description} />
+            <div className="experienceGrid">
+              {siteContent.workExperience.map((job) => (
+                <article className={`experienceCard ${cardSkillClass(job.skillIds)}`} key={job.id}>
+                  <h3>{job.role}</h3>
+                  <p className="muted">
+                    {job.company}
+                    {siteContent.labels.separator}
+                    {job.period}
+                  </p>
+                  <ul>
+                    {job.bullets.map((bullet) => (
+                      <li key={bullet}>{bullet}</li>
+                    ))}
+                  </ul>
+                </article>
+              ))}
+            </div>
+          </div>
+        </section>
+
         <section id={siteContent.sections.technicalProjects.id} className="PageSection">
           <div className="sectionInner">
             <SectionHeader
@@ -347,33 +370,18 @@ function PortfolioApp({ siteContent, projectContent }) {
                 >
                   <img className="projectCoverImage" src={project.cover} alt={project.title} />
                   <div className="projectMeta">
+                    {project.type ? <p className="projectType">{project.type}</p> : null}
                     <h3>{project.title}</h3>
                     <p className="projectDescription">{project.description}</p>
+                    {project.stack?.length ? (
+                      <div className="projectStack" aria-label={siteContent.labels.technologies}>
+                        {project.stack.map((item) => (
+                          <span key={item}>{item}</span>
+                        ))}
+                      </div>
+                    ) : null}
                   </div>
                 </a>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        <section id={siteContent.sections.experience.id} className="PageSection">
-          <div className="sectionInner">
-            <SectionHeader title={siteContent.sections.experience.title} description={siteContent.sections.experience.description} />
-            <div className="experienceGrid">
-              {siteContent.workExperience.map((job) => (
-                <article className={`experienceCard ${cardSkillClass(job.skillIds)}`} key={job.id}>
-                  <h3>{job.role}</h3>
-                  <p className="muted">
-                    {job.company}
-                    {siteContent.labels.separator}
-                    {job.period}
-                  </p>
-                  <ul>
-                    {job.bullets.map((bullet) => (
-                      <li key={bullet}>{bullet}</li>
-                    ))}
-                  </ul>
-                </article>
               ))}
             </div>
           </div>

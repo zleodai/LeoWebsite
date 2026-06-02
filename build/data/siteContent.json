@@ -1,7 +1,7 @@
 {
   "meta": {
-    "title": "Leo Dai | Software Engineer",
-    "description": "Leo Dai is a Los Angeles software engineer focused on backend data tools, telemetry systems, and real-time interactive software."
+    "title": "zleodai",
+    "description": "hi"
   },
   "typing": {
     "speedMs": 42
@@ -11,8 +11,8 @@
     "links": [
       { "label": "about", "href": "#about" },
       { "label": "skills", "href": "#skills" },
-      { "label": "projects", "href": "#projects" },
       { "label": "experience", "href": "#experience" },
+      { "label": "projects", "href": "#projects" },
       { "label": "education", "href": "#education" },
       { "label": "contact", "href": "#contact" }
     ]
@@ -20,7 +20,7 @@
   "hero": {
     "eyebrow": "> software_engineer",
     "name": "Leo Dai",
-    "tagline": "software engineer | real-time systems + data tools",
+    "tagline": "software engineer | game developer",
     "summary": "MS Computer Science student in Los Angeles building backend/data tools, telemetry systems, and interactive software with Python, Go, C#, and Unity.",
     "highlightSkillIds": [],
     "actions": [
@@ -71,15 +71,28 @@
   },
   "skills": [
     { "id": "python", "label": "Python" },
-    { "id": "pytorch", "label": "PyTorch" },
-    { "id": "reinforcement-learning", "label": "Machine Learning" },
     { "id": "go", "label": "Go" },
     { "id": "csharp", "label": "C#" },
     { "id": "cpp", "label": "C++" },
+    { "id": "javascript", "label": "JavaScript" },
+    { "id": "typescript", "label": "TypeScript" },
+    { "id": "react", "label": "React" },
+    { "id": "node", "label": "Node.js" },
     { "id": "unity", "label": "Unity" },
     { "id": "unreal", "label": "Unreal Engine" },
+    { "id": "lua", "label": "Lua" },
+    { "id": "webgl", "label": "WebGL" },
+    { "id": "graphics", "label": "Computer Graphics" },
+    { "id": "machine-learning", "label": "Machine Learning" },
+    { "id": "data-pipelines", "label": "Data Pipelines" },
+    { "id": "databases", "label": "Databases" },
     { "id": "apis", "label": "APIs" },
-    { "id": "data-pipelines", "label": "Data Pipelines" }
+    { "id": "discord-api", "label": "Discord API" },
+    { "id": "ui-engineering", "label": "UI Engineering" },
+    { "id": "gameplay-programming", "label": "Gameplay Programming" },
+    { "id": "game-ai", "label": "Game AI" },
+    { "id": "procedural-generation", "label": "Procedural Generation" },
+    { "id": "testing", "label": "Testing" }
   ],
   "workExperience": [
     {
