@@ -1,6 +1,6 @@
 {
-  "short_name": "zleodai",
-  "name": "zleodai",
+  "short_name": "Leo Dai",
+  "name": "Leo Dai | Game Developer",
   "icons": [
     {
       "src": "favicon.ico",
@@ -20,6 +20,6 @@
   ],
   "start_url": ".",
   "display": "standalone",
-  "theme_color": "#07100f",
-  "background_color": "#07100f"
+  "theme_color": "#121513",
+  "background_color": "#121513"
 }

@@ -1,41 +1,66 @@
 {
   "technicalProjects": [
     {
+      "id": "coordinated-goap-agents",
+      "featured": true,
+      "priority": 2.5,
+      "title": "Tactical GOAP Agents",
+      "type": "Game AI / tactical simulation",
+      "period": "Jul 2026 - Aug 2026",
+      "link": "https://github.com/zleodai/CompyAgents",
+      "stack": ["Luau", "Roblox", "Rojo", "React Lua", "NoobPath"],
+      "skillIds": ["lua", "luau", "roblox", "goap", "game-ai"],
+      "description": "Built a server-authoritative tactical AI prototype in Roblox. Agents use goal-oriented action planning, vision and sound sensing, and individual memory to search, fight, reload, and use cover.",
+      "bullets": [
+        "Implemented bounded, cost-based GOAP planning with per-agent beliefs and action execution.",
+        "Integrated NoobPath movement and SPEARHEAD weapon control for cover-based combat.",
+        "Built a React Lua debug panel for inspecting plans, beliefs, actions, and planner logs."
+      ]
+    },
+    {
       "id": "racing-telemetry-analyzer-pipeline",
+      "featured": false,
+      "priority": 1,
       "title": "Racing Telemetry Analyzer Pipeline",
+      "period": "Jan 2026 - Apr 2026",
       "type": "Data pipeline / telemetry visualization",
       "link": "https://github.com/zleodai/FSAESoftware",
-      "stack": ["C#", "Unity", "Go", "SQLite", "Python", "Lua", "Assetto Corsa", "PostgreSQL"],
+      "stack": ["C#", "Unity", "Go", "SQLite", "Python", "Lua"],
       "skillIds": ["csharp", "unity", "go", "python", "lua", "databases", "apis", "data-pipelines"],
-      "description": "Built a motorsports telemetry pipeline that captures racing-simulator and FSAE vehicle data, stores it locally, and replays laps through a Unity analyzer with track-map and graph visualizations.",
+      "description": "Collaborated in a team of four on an Assetto Corsa telemetry pipeline with Python/Lua collection, a Go and SQLite backend, and a Unity dashboard for lap playback, vehicle-position replay, and performance charts.",
       "bullets": [
         "Built and iterated on the Unity TrackSide analyzer, including packet playback, speed/throttle/brake/steering charts, and car-position replay on generated track maps.",
         "Integrated the Unity front end with a Go HTTP server and SQLite database, including demo-build work to bundle and launch the backend alongside the analyzer.",
         "Created Assetto Corsa telemetry collection tooling in Python/Lua to capture lap and vehicle data for ingestion into the database pipeline.",
-        "Worked across telemetry schemas for packets, laps, tire data, and vehicle dynamics to support historical analysis and performance diagnostics."
+        "Worked across telemetry schemas for packets, laps, tires, and vehicle dynamics. Earlier pipeline variants used PostgreSQL; the Unity analyzer uses SQLite."
       ]
     },
     {
       "id": "autonomous-racing-agent",
+      "featured": true,
+      "priority": 2,
       "title": "Autonomous Racing Agent",
+      "period": "Jan 2026 - Apr 2026",
       "type": "Machine learning / reinforcement learning",
       "link": "https://github.com/Law47/AutonomousRacingAgent",
-      "stack": ["Python", "PyTorch", "Soft Actor-Critic", "OpenAI Gym", "Assetto Corsa", "NumPy", "Pandas", "TensorBoard"],
+      "stack": ["Python", "PyTorch", "Gymnasium", "NumPy", "TensorBoard", "vJoy"],
       "skillIds": ["python", "machine-learning", "data-pipelines", "testing"],
-      "description": "Extended an Assetto Corsa reinforcement-learning stack with SAC training, telemetry-driven rewards, demonstrations, checkpointing, and evaluation tooling.",
+      "description": "Built a Python/PyTorch racing agent for Assetto Corsa using Soft Actor-Critic. The main implementation combines a Gymnasium environment, shared-memory telemetry, vJoy driving controls, and racing-line rewards.",
       "bullets": [
-        "Extended the SAC training pipeline with demonstration-aware replay sampling, Q-filtered behavior cloning, n-step returns, TensorBoard metrics, and resume-safe checkpoint loading.",
+        "Implemented SAC training with n-step replay, TensorBoard metrics, model checkpoints, and training/evaluation tools.",
         "Implemented reward and curriculum logic around forward progress, racing-line distance, border risk, low-speed/off-track termination, action smoothness, and lap-completion bonuses.",
-        "Added support for manual-shift learning through discrete shift policies, action masks, behavior-cloning labels, auto-shifter curriculum hooks, and tests covering shifter/replay behavior.",
-        "Built tooling for recording and visualizing driving demonstrations, then used logged telemetry, lap stats, and saved model checkpoints to iterate on training quality."
+        "Extended the experimental BernoulliShift branch with demonstration-aware replay, Q-filtered behavior cloning, discrete shift policies, action masks, and training-state restoration. That branch uses Gym and ViGEm controls.",
+        "Added demonstration recording/visualization tools and shifter, replay, and checkpoint tests in BernoulliShift."
       ]
     },
     {
       "id": "ping-monitor-dashboard",
+      "featured": false,
+      "priority": 8,
       "title": "Ping Monitor Dashboard",
       "type": "Network monitoring tool",
       "link": "https://github.com/zleodai/PingTester",
-      "stack": ["Python", "SQLite", "HTML", "CSS", "JavaScript", "SVG", "PowerShell"],
+      "stack": ["Python", "SQLite", "JavaScript", "HTML", "CSS"],
       "skillIds": ["python", "javascript", "databases", "data-pipelines", "ui-engineering"],
       "description": "Built a local ping monitoring dashboard that tracks gateway and internet latency, packet loss, and session history in real time.",
       "bullets": [
@@ -47,12 +72,14 @@
     },
     {
       "id": "convaneo-compiler",
+      "featured": false,
+      "priority": 4,
       "title": "Convaneo: Custom Language Compiler",
       "type": "Compiler / programming language",
       "link": "https://github.com/evansteinho/Convaneo",
-      "stack": ["JavaScript", "Node.js", "Ohm.js", "ES Modules", "node:test", "Next.js", "React", "TypeScript"],
+      "stack": ["JavaScript", "Node.js", "Ohm.js", "Next.js", "React", "TypeScript"],
       "skillIds": ["javascript", "typescript", "node", "react", "testing"],
-      "description": "Built a statically typed custom programming language with an Ohm.js grammar and a Node.js compiler pipeline that parses, analyzes, optimizes, and emits JavaScript.",
+      "description": "Built a statically typed language and JavaScript compiler using Ohm.js and Node.js. The repository also includes a separate Next.js/React showcase written in TypeScript.",
       "bullets": [
         "Implemented the compiler pipeline from grammar parsing through semantic analysis, optimization, and JavaScript code generation.",
         "Defined language support for typed variables, functions, recursion, arrays, control flow, loops, type casts, boolean logic, and arithmetic expressions.",
@@ -62,12 +89,14 @@
     },
     {
       "id": "chatclearer-discord-bot",
+      "featured": false,
+      "priority": 12,
       "title": "ChatClearer Discord Moderation Bot",
       "type": "Discord bot / moderation tool",
       "link": "https://github.com/zleodai/ChatClearerPlugin",
-      "stack": ["JavaScript", "Node.js", "discord.js v14", "Discord API", "npm", "ESLint"],
+      "stack": ["JavaScript", "Node.js", "discord.js", "Discord API"],
       "skillIds": ["javascript", "node", "discord-api", "apis"],
-      "description": "Built a Node.js Discord bot that scans recent channel history and removes messages containing configured banned terms.",
+      "description": "Built a Node.js Discord moderation bot with a slash command that scans recent channel history and deletes messages containing configured banned terms.",
       "bullets": [
         "Implemented a slash command with a depth option to fetch channel messages in batches and delete matching content.",
         "Structured the bot with dynamic command and event loading using Discord.js collections and interaction handlers.",
@@ -77,42 +106,48 @@
     },
     {
       "id": "discord-music-bot",
+      "featured": false,
+      "priority": 13,
       "title": "Discord Music Bot",
       "type": "Bot / voice-channel tool",
       "link": "https://github.com/zleodai/DiscordMusicBot",
-      "stack": ["Python", "discord.py", "Discord API", "yt-dlp", "FFmpeg"],
+      "stack": ["Python", "discord.py", "yt-dlp", "FFmpeg"],
       "skillIds": ["python", "discord-api", "apis"],
       "description": "Built a Python Discord bot that joins a user's voice channel, downloads audio from a YouTube link, converts it, and plays it through Discord voice chat.",
       "bullets": [
         "Built the bot as a class-based Python application with a simple play-command flow.",
         "Integrated Discord voice-channel connection logic using discord.py intents, events, and voice clients.",
-        "Used yt-dlp and FFmpeg-backed playback to extract YouTube audio and stream it into a live voice channel.",
+        "Used yt-dlp to download and convert YouTube audio, then played the local audio file through FFmpeg and Discord voice.",
         "Kept bot credentials isolated through a local config file excluded from version control."
       ]
     },
     {
       "id": "acsidekick-assetto-corsa-telemetry",
+      "featured": false,
+      "priority": 9,
       "title": "ACSidekick Telemetry Plugin",
       "type": "Game telemetry / mod tooling",
       "link": "https://github.com/zleodai/ACSidekick",
-      "stack": ["Lua", "Assetto Corsa", "Custom Shaders Patch API", "ImGui-style UI", "DWrite fonts"],
+      "stack": ["Lua", "Go", "SQLite", "Custom Shaders Patch", "LuaSocket"],
       "skillIds": ["lua", "data-pipelines", "ui-engineering", "apis"],
-      "description": "Built a Lua-based Assetto Corsa sidekick app that renders an in-game telemetry control panel and live car-centered track map.",
+      "description": "Built an Assetto Corsa Lua app with an in-game telemetry panel and car-centered track map, alongside a prototype Go/SQLite backend for telemetry storage and queries.",
       "bullets": [
         "Implemented the Assetto Corsa app manifest and Lua callback lifecycle for window rendering, UI pre-rendering, and simulation update hooks.",
         "Built reusable UI primitives for transparent panels, centered text, image rendering, click handling, custom fonts, and rotating map assets.",
         "Mapped live car position and heading onto Assetto Corsa track map assets using map.ini scaling/offset data, with mouse-wheel zoom support.",
-        "Prototyped a database-link flow with collect/unlink controls and a localhost telemetry service abstraction."
+        "Added collect/unlink controls and prototype CSV streaming through LuaSocket, alongside a separate Go HTTP service for SQLite storage and queries."
       ]
     },
     {
       "id": "storyboard-connect",
+      "featured": false,
+      "priority": 3,
       "title": "Storyboard Connect",
       "type": "Full-stack creative marketplace",
       "link": "https://github.com/zleodai/storyboardConnect",
-      "stack": ["React", "TypeScript", "Vite", "Tailwind CSS", "Vercel Functions", "Supabase", "PostgreSQL", "Google OAuth"],
+      "stack": ["TypeScript", "React", "Tailwind CSS", "Vercel Functions", "Supabase", "PostgreSQL", "Vitest"],
       "skillIds": ["react", "typescript", "javascript", "databases", "apis", "ui-engineering", "testing"],
-      "description": "Built a two-sided platform where storyboard artists can showcase profiles and portfolios while filmmakers discover talent and connect through authenticated workflows.",
+      "description": "Built a marketplace for storyboard artists and filmmakers with portfolio profiles, filtered discovery, Google sign-in, and project applications. The current React/TypeScript app uses Vercel Functions and Supabase-hosted PostgreSQL.",
       "bullets": [
         "Built the React/TypeScript frontend with artist/filmmaker entry paths, filterable discovery grids, profile pages, cards, and detail modals.",
         "Implemented Vercel serverless APIs for artists, projects, applications, profiles, featured content, and filter-count endpoints backed by Supabase/PostgreSQL.",
@@ -122,6 +157,8 @@
     },
     {
       "id": "custom-webgl-graphics-library",
+      "featured": true,
+      "priority": 5,
       "title": "Custom WebGL 3D Graphics Library",
       "type": "Computer graphics / WebGL engine",
       "link": "https://github.com/lmu-cmsi3710-spring2025/our-own-3d-library-theadultsaretalking",
@@ -137,27 +174,31 @@
     },
     {
       "id": "realtime-procedural-generation",
+      "featured": false,
+      "priority": 15,
       "title": "Realtime Procedural Generation",
       "type": "Real-time rendering",
-      "stack": ["C#", "Unity Terrain"],
+      "stack": ["C#", "Unity"],
       "skillIds": ["csharp", "unity", "procedural-generation"],
-      "description": "Built a continuous terrain generation system that streams 3D environment data during play without major performance stutter.",
+      "description": "Built a Unity prototype that generates terrain at runtime and updates world chunks as the player moves.",
       "bullets": [
-        "Generated terrain at runtime with responsive chunk updates.",
-        "Focused on smooth frame behavior while new world data entered the scene."
+        "Used Unity Terrain for runtime environment generation.",
+        "Organized world updates around terrain chunks during play."
       ]
     }
   ],
   "gameProjects": [
     {
       "id": "walls-werent-always-red",
+      "featured": false,
+      "priority": 10,
       "title": "The Walls Weren't Always Red",
       "type": "48-hour game jam / 3D action prototype",
       "link": "https://law47.itch.io/the-walls-werent-always-red",
       "cover": "https://img.itch.zone/aW1nLzI1NzU2MDk2LnBuZw==/315x250%23c/9Yq5Wf.png",
-      "stack": ["Unity 6", "C#", "URP", "Input System", "Cinemachine", "Unity Physics", "Particle Systems"],
+      "stack": ["C#", "Unity", "URP", "Cinemachine", "Input System"],
       "skillIds": ["csharp", "unity", "gameplay-programming", "game-ai", "ui-engineering"],
-      "description": "A surreal 48-hour Unity action prototype where an eldritch player character grows by absorbing NPCs, paints the city red with blood effects, and smashes through the environment toward a final objective.",
+      "description": "A 48-hour Unity action prototype built around absorbing NPCs, growing in size, and destroying the environment. Includes NPC pursuit and flee behavior, pooled spawning, and blood effects.",
       "bullets": [
         "Implemented a growth loop where NPC collisions add health, scale the player model, increase Rigidbody mass, and update the blood gauge UI.",
         "Built civilian flee behavior, cop pursuit/shooting behavior, bullet damage, and pooled NPC spawning/despawning around the player.",
@@ -167,13 +208,15 @@
     },
     {
       "id": "photophobic-teyeme",
+      "featured": true,
+      "priority": 1,
       "title": "Photophobic Teyeme",
       "type": "48-hour game jam / 2D action-stealth game",
       "link": "https://law47.itch.io/photophobic-teyeme",
       "cover": "https://img.itch.zone/aW1nLzIzNjkwNzIwLnBuZw==/315x250%23c/491s4R.png",
-      "stack": ["Unity 6", "C#", "Unity 2D Physics", "URP 2D", "Input System", "Tilemap", "TextMeshPro"],
+      "stack": ["C#", "Unity", "URP", "Input System", "Tilemap"],
       "skillIds": ["csharp", "unity", "gameplay-programming", "game-ai", "ui-engineering"],
-      "description": "A 48-hour Unity game jam project where a breached containment entity uses wall-gripping tendrils and a charge-limited eye-open power to evade armed guards and escape Site 11b.",
+      "description": "A 48-hour Unity action-stealth game with wall-gripping movement, a charge-limited time-slowing ability, and GOAP-driven guards. Players escape containment by navigating surfaces and managing their eye power.",
       "bullets": [
         "Implemented wall-adjacent movement with Rigidbody2D physics, surface trigger detection, gravity toggling, and pooled tendril particle attachments.",
         "Built a charge-based eye mechanic that drains/recharges, slows global time, boosts player responsiveness, and drives vignette, UI, and audio feedback.",
@@ -183,13 +226,15 @@
     },
     {
       "id": "ralcoop",
+      "featured": true,
+      "priority": 0,
       "title": "RALCOOP",
       "type": "96-hour game jam / 3D first-person action-puzzle",
       "link": "https://law47.itch.io/ralcoop",
       "cover": "https://img.itch.zone/aW1nLzIyNTMyMTQ5LnBuZw==/315x250%23c/5wVbQi.png",
-      "stack": ["Unity 6", "C#", "WebGL", "URP", "Input System", "NavMesh", "TextMeshPro"],
+      "stack": ["C#", "Unity", "WebGL", "NavMesh", "Input System"],
       "skillIds": ["csharp", "unity", "gameplay-programming", "game-ai", "ui-engineering"],
-      "description": "A surreal first-person action-puzzle where a rewind mechanic lets players replay NPC and object states to solve timing, combat, and traversal encounters.",
+      "description": "A Unity first-person action-puzzle game with a timestamp-based rewind system for NPCs and physics objects. Players restore earlier states to solve timing, combat, and traversal encounters.",
       "bullets": [
         "Built a timestamp-based rewind framework for NPCs and physics objects, restoring position, rotation, velocity, health, AI steps, and activation state during reverse playback.",
         "Implemented first-person movement, camera look, sprint/crouch/jump, pickup/drop interactions, ammo collection, reload flow, recoil, tracers, and hit effects.",
@@ -199,13 +244,15 @@
     },
     {
       "id": "unstable",
+      "featured": true,
+      "priority": 1.5,
       "title": "Unstable",
       "type": "3D game jam / Unity Windows game",
       "link": "https://law47.itch.io/unstable",
       "cover": "https://img.itch.zone/aW1nLzE4NTM3NDkxLnBuZw==/315x250%23c/iN2bVF.png",
-      "stack": ["Unity 6", "C#", "Cinemachine", "Unity Behavior", "Burst/Jobs", "Unity Terrain", "TextMeshPro"],
+      "stack": ["C#", "Unity", "Cinemachine", "Unity Behavior", "Burst", "Unity Jobs"],
       "skillIds": ["csharp", "unity", "gameplay-programming", "game-ai", "procedural-generation", "ui-engineering"],
-      "description": "A surreal 3D horse game-jam project where movement, score, pickups, music, and enemy pressure escalate into an unstable chase across a generated world.",
+      "description": "A Unity chase game with physics-based movement, escalating enemy pressure, and chunked procedural terrain. World generation uses Burst/Jobs and pooled terrain and structures.",
       "bullets": [
         "Built a Rigidbody-based horse controller with sprinting, jumping, mouse-look camera targeting, follow-direction steering, and speed/jump scaling by player level.",
         "Implemented the progression loop: pickups increase a decaying resource, trigger level changes, swap music layers, update UI bars, and drive the win/fail sequence.",
@@ -215,13 +262,15 @@
     },
     {
       "id": "smainter-smail",
+      "featured": false,
+      "priority": 14,
       "title": "Smainter Smail",
       "type": "96-hour game jam / 2D action-crafting game",
       "link": "https://law47.itch.io/smainter-smail",
       "cover": "https://img.itch.zone/aW1nLzE3NDQwMTcwLnBuZw==/315x250%23c/y7X99T.png",
-      "stack": ["Unity 2022.3 LTS", "C#", "WebGL", "Unity 2D", "URP", "Input System", "TextMeshPro", "JSON persistence"],
+      "stack": ["C#", "Unity", "WebGL", "URP", "Input System"],
       "skillIds": ["csharp", "unity", "gameplay-programming", "ui-engineering"],
-      "description": "A jam-built Unity action game where players paint and enchant a custom sword, weigh it against customer requirements, then fight with the exact weapon they crafted.",
+      "description": "A Unity crafting and combat game where players paint and enchant a sword, then wield it in physics-driven fights. Custom weapons persist as PNG/JSON data and load with generated 2D colliders.",
       "bullets": [
         "Built a blacksmith painting system with draw, fill, erase, hilt-mask, and elemental brush tools, including weight tracking and gold-based enchantment costs.",
         "Saved crafted weapons as runtime PNG and JSON data, then reloaded them into later scenes as playable sprites with generated PolygonCollider2D hitboxes.",

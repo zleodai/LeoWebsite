@@ -1,72 +1,88 @@
 {
   "meta": {
-    "title": "zleodai",
-    "description": "hi"
-  },
-  "typing": {
-    "speedMs": 42
+    "title": "Leo Dai",
+    "description": "Portfolio Website for Leo Dai"
   },
   "nav": {
-    "brand": "$ leo dai",
+    "brand": "Hi",
     "links": [
-      { "label": "about", "href": "#about" },
-      { "label": "skills", "href": "#skills" },
-      { "label": "experience", "href": "#experience" },
-      { "label": "projects", "href": "#projects" },
-      { "label": "education", "href": "#education" },
-      { "label": "contact", "href": "#contact" }
+      { "label": "About", "href": "#about" },
+      { "label": "Experience", "href": "#experience" },
+      { "label": "Projects", "href": "#projects" },
+      { "label": "Education", "href": "#education" },
+      { "label": "Contact", "href": "#contact" }
     ]
   },
   "hero": {
-    "eyebrow": "> software_engineer",
+    "eyebrow": "Game Developer",
     "name": "Leo Dai",
-    "tagline": "software engineer | game developer",
-    "summary": "MS Computer Science student in Los Angeles building backend/data tools, telemetry systems, and interactive software with Python, Go, C#, and Unity.",
-    "highlightSkillIds": [],
+    "tagline": "",
+    "summary": "Game developer and MS Computer Science student in Los Angeles. I build gameplay, AI, and tools in primarily Unity.",
+    "games": [
+      {
+        "title": "SafteySpace",
+        "href": "https://zleodai.itch.io/space",
+        "cover": "https://img.itch.zone/aW1nLzI4ODA0NDExLnBuZw==/315x250%23c/un0ru3.png"
+      },
+      {
+        "title": "RALCOOP",
+        "href": "https://law47.itch.io/ralcoop",
+        "cover": "https://img.itch.zone/aW1nLzIyNTMyMTQ5LnBuZw==/315x250%23c/5wVbQi.png"
+      },
+      {
+        "title": "Photophobic Teyeme",
+        "href": "https://law47.itch.io/photophobic-teyeme",
+        "cover": "https://img.itch.zone/aW1nLzIzNjkwNzIwLnBuZw==/315x250%23c/491s4R.png"
+      },
+      {
+        "title": "Smainter Smail",
+        "href": "https://law47.itch.io/smainter-smail",
+        "cover": "https://img.itch.zone/aW1nLzE3NDQwMTcwLnBuZw==/315x250%23c/y7X99T.png"
+      }
+    ],
     "actions": [
       {
-        "label": "resume",
-        "href": "/2026%20Resume.pdf",
-        "download": "2026 Resume.pdf",
+        "label": "Play my games",
+        "href": "https://zleodai.itch.io/",
+        "external": true,
         "variant": "primary"
       },
       {
-        "label": "linkedin",
+        "label": "Resume",
+        "href": "/ResumeA.pdf",
+        "download": "Leo Dai Resume.pdf",
+        "variant": "secondary"
+      },
+      {
+        "label": "LinkedIn",
         "href": "https://www.linkedin.com/in/leo-dai-5a729623a/",
         "external": true,
-        "variant": "ghost"
+        "variant": "secondary"
       }
     ]
   },
   "sections": {
-    "skills": {
-      "id": "skills",
-      "title": "skills",
-      "description": ""
-    },
-    "technicalProjects": {
-      "id": "projects",
-      "title": "technical projects",
-      "description": ""
-    },
-    "gameProjects": {
-      "title": "playable game work",
-      "description": "mostly from Game Jams"
-    },
     "experience": {
       "id": "experience",
-      "title": "experience",
+      "title": "Experience",
       "description": ""
+    },
+    "projects": {
+      "id": "projects",
+      "title": "Projects",
+      "description": "",
+      "moreTitle": "More Work",
+      "moreDescription": "Software tools and game jam projects. From November 2023 to August 2026, shipped games in teams of 3-5 under 48-72 hour deadlines, building Unity systems from ideation to delivery."
     },
     "education": {
       "id": "education",
-      "title": "education",
+      "title": "Education",
       "description": ""
     },
     "contact": {
       "id": "contact",
-      "title": "contact",
-      "description": "Open to software engineering and quality assurance internships/jobs in Los Angeles or remote"
+      "title": "Contact",
+      "description": "Open to software engineering, quality assurance, or game development roles"
     }
   },
   "skills": [
@@ -81,6 +97,9 @@
     { "id": "unity", "label": "Unity" },
     { "id": "unreal", "label": "Unreal Engine" },
     { "id": "lua", "label": "Lua" },
+    { "id": "luau", "label": "Luau" },
+    { "id": "roblox", "label": "Roblox" },
+    { "id": "goap", "label": "GOAP" },
     { "id": "webgl", "label": "WebGL" },
     { "id": "graphics", "label": "Computer Graphics" },
     { "id": "machine-learning", "label": "Machine Learning" },
@@ -97,12 +116,12 @@
   "workExperience": [
     {
       "id": "well-frog-technical-developer",
-      "company": "Well Frog Studios LLC",
-      "role": "Technical Developer",
+      "company": "WellFrog Studios LLC",
+      "role": "Contract Software Developer",
       "period": "Sept 2025 - Dec 2025",
       "skillIds": ["csharp", "unity"],
       "bullets": [
-        "Developed data-oriented gameplay systems in Unity ECS using C# to support large numbers of interactive entities.",
+        "Built a data-oriented interactive particle simulator in Unity ECS (C#) for a mobile experience.",
         "Rebuilt a web demo into a mobile-focused Unity experience in direct collaboration with the product manager.",
         "Implemented interactive particle features for dynamic user-created scenes."
       ]
@@ -134,15 +153,51 @@
     {
       "school": "Loyola Marymount University",
       "degree": "Master of Science in Computer Science",
-      "period": "Expected Dec 2026"
-    },
-    {
-      "school": "Loyola Marymount University",
-      "degree": "Bachelor of Science in Computer Science",
-      "period": "Dec 2025"
+      "period": "Expected Dec 2026",
+      "gpa": "4.0",
+      "courses": [
+        "Secure Software Development",
+        "Introduction to Cybersecurity",
+        "Autonomous Racing Agents",
+        "Emergent Complex Adaptive Systems",
+        "Machine Learning",
+        "Knowledge-Based Systems",
+        "Programming Language Foundations",
+        "Computer Architecture and VHDL",
+        "Game Design & Architecture",
+        "AI in Game Development",
+        "Game Design",
+        "Game Development",
+        "Data Science",
+        "Computer Graphics",
+        "Networks and Internets",
+        "Web App Development",
+        "Data Structures & Applications",
+        "Algorithms and Analysis",
+        "Artificial Intelligence",
+        "Cognitive Systems Design",
+        "Computer Programming and Lab",
+        "Computer Systems Organization",
+        "Discrete Mathematics for Computer Science",
+        "Languages & Automata I",
+        "Languages & Automata II",
+        "Computability & Complexity"
+      ]
     }
   ],
   "contactLinks": [
+    {
+      "label": "GitHub",
+      "value": "github.com/zleodai",
+      "href": "https://github.com/zleodai",
+      "external": true
+    },
+    {
+      "label": "itch.io",
+      "value": "zleodai.itch.io",
+      "href": "https://zleodai.itch.io/",
+      "external": true
+    },
     {
       "label": "Email",
       "value": "awsomeleodai@gmail.com",
@@ -157,19 +212,11 @@
     {
       "label": "Phone",
       "value": "818-647-8358",
-      "external": true
+      "href": "tel:8186478358"
     }
   ],
-  "overlay": {
-    "eyebrow": "skill details",
-    "closeLabel": "close",
-    "projectsTitle": "Projects",
-    "experienceTitle": "Work Experience",
-    "emptyMessage": "No projects or work experience are currently tagged with this skill."
-  },
   "labels": {
     "technologies": "Technologies",
-    "relatedSkills": "Related skills",
     "openProject": "Open project",
     "separator": " | "
   }
