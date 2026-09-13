@@ -1,0 +1,25 @@
+{
+  "id": "autonomous-racing-agent",
+  "order": 2,
+  "title": "Autonomous Racing Agent",
+  "categoryTitle": "Machine learning / reinforcement learning",
+  "description": "Built a Python/PyTorch racing agent for Assetto Corsa using Soft Actor-Critic. The main implementation combines a Gymnasium environment, shared-memory telemetry, vJoy driving controls, and racing-line rewards.",
+  "technicalWork": [
+    "Implemented SAC training with n-step replay, TensorBoard metrics, model checkpoints, and training/evaluation tools.",
+    "Implemented reward and curriculum logic around forward progress, racing-line distance, border risk, low-speed/off-track termination, action smoothness, and lap-completion bonuses.",
+    "Extended the experimental BernoulliShift branch with demonstration-aware replay, Q-filtered behavior cloning, discrete shift policies, action masks, and training-state restoration. That branch uses Gym and ViGEm controls.",
+    "Added demonstration recording/visualization tools and shifter, replay, and checkpoint tests in BernoulliShift."
+  ],
+  "technologies": [
+    "Python",
+    "PyTorch",
+    "Gymnasium",
+    "NumPy",
+    "TensorBoard",
+    "vJoy"
+  ],
+  "period": "Jan 2026 - Apr 2026",
+  "sourceLinkMessage": "View source on GitHub",
+  "sourceLink": "https://github.com/Law47/AutonomousRacingAgent",
+  "section": "technical"
+}

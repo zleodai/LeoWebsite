@@ -1,0 +1,23 @@
+{
+  "id": "smainter-smail",
+  "order": 14,
+  "title": "Smainter Smail",
+  "categoryTitle": "96-hour game jam / 2D action-crafting game",
+  "description": "A Unity crafting and combat game where players paint and enchant a sword, then wield it in physics-driven fights. Custom weapons persist as PNG/JSON data and load with generated 2D colliders.",
+  "technicalWork": [
+    "Built a blacksmith painting system with draw, fill, erase, hilt-mask, and elemental brush tools, including weight tracking and gold-based enchantment costs.",
+    "Saved crafted weapons as runtime PNG and JSON data, then reloaded them into later scenes as playable sprites with generated PolygonCollider2D hitboxes.",
+    "Implemented physics-driven combat where mouse-swinging a weapon can damage enemies, propel the player, and trigger fire, ice, lightning, and bomb effects.",
+    "Connected dialogue, customer weight limits, scale-result videos/animations, fight outcomes, gold rewards, music, and scene transitions through persistent game state."
+  ],
+  "technologies": [
+    "C#",
+    "Unity",
+    "WebGL",
+    "URP",
+    "Input System"
+  ],
+  "sourceLinkMessage": "Play on itch.io",
+  "sourceLink": "https://law47.itch.io/smainter-smail",
+  "section": "game"
+}

@@ -1,0 +1,25 @@
+{
+  "id": "racing-telemetry-analyzer-pipeline",
+  "order": 1,
+  "title": "Racing Telemetry Analyzer Pipeline",
+  "categoryTitle": "Data pipeline / telemetry visualization",
+  "description": "Collaborated in a team of four on an Assetto Corsa telemetry pipeline with Python/Lua collection, a Go and SQLite backend, and a Unity dashboard for lap playback, vehicle-position replay, and performance charts.",
+  "technicalWork": [
+    "Built and iterated on the Unity TrackSide analyzer, including packet playback, speed/throttle/brake/steering charts, and car-position replay on generated track maps.",
+    "Integrated the Unity front end with a Go HTTP server and SQLite database, including demo-build work to bundle and launch the backend alongside the analyzer.",
+    "Created Assetto Corsa telemetry collection tooling in Python/Lua to capture lap and vehicle data for ingestion into the database pipeline.",
+    "Worked across telemetry schemas for packets, laps, tires, and vehicle dynamics. Earlier pipeline variants used PostgreSQL; the Unity analyzer uses SQLite."
+  ],
+  "technologies": [
+    "C#",
+    "Unity",
+    "Go",
+    "SQLite",
+    "Python",
+    "Lua"
+  ],
+  "period": "Jan 2026 - Apr 2026",
+  "sourceLinkMessage": "View source on GitHub",
+  "sourceLink": "https://github.com/zleodai/FSAESoftware",
+  "section": "technical"
+}

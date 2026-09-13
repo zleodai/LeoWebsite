@@ -1,0 +1,23 @@
+{
+  "id": "coordinated-goap-agents",
+  "order": 2.5,
+  "title": "Tactical GOAP Agents",
+  "categoryTitle": "Game AI / tactical simulation",
+  "description": "Built a server-authoritative tactical AI prototype in Roblox. Agents use goal-oriented action planning, vision and sound sensing, and individual memory to search, fight, reload, and use cover.",
+  "technicalWork": [
+    "Implemented bounded, cost-based GOAP planning with per-agent beliefs and action execution.",
+    "Integrated NoobPath movement and SPEARHEAD weapon control for cover-based combat.",
+    "Built a React Lua debug panel for inspecting plans, beliefs, actions, and planner logs."
+  ],
+  "technologies": [
+    "Luau",
+    "Roblox",
+    "Rojo",
+    "React Lua",
+    "NoobPath"
+  ],
+  "period": "Jul 2026 - Aug 2026",
+  "sourceLinkMessage": "View source on GitHub",
+  "sourceLink": "https://github.com/zleodai/CompyAgents",
+  "section": "technical"
+}

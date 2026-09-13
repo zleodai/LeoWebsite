@@ -1,0 +1,23 @@
+{
+  "id": "walls-werent-always-red",
+  "order": 10,
+  "title": "The Walls Weren't Always Red",
+  "categoryTitle": "48-hour game jam / 3D action prototype",
+  "description": "A 48-hour Unity action prototype built around absorbing NPCs, growing in size, and destroying the environment. Includes NPC pursuit and flee behavior, pooled spawning, and blood effects.",
+  "technicalWork": [
+    "Implemented a growth loop where NPC collisions add health, scale the player model, increase Rigidbody mass, and update the blood gauge UI.",
+    "Built civilian flee behavior, cop pursuit/shooting behavior, bullet damage, and pooled NPC spawning/despawning around the player.",
+    "Created splatter and blood-trail systems using randomized decals, pooled blood pools, timed trail stamping, and particle/audio feedback.",
+    "Added destructible buildings and props gated by player size, including sinking destruction sequences, rubble particles, NPC release, and a final win condition."
+  ],
+  "technologies": [
+    "C#",
+    "Unity",
+    "URP",
+    "Cinemachine",
+    "Input System"
+  ],
+  "sourceLinkMessage": "Play on itch.io",
+  "sourceLink": "https://law47.itch.io/the-walls-werent-always-red",
+  "section": "game"
+}

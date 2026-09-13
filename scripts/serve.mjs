@@ -6,7 +6,7 @@ import path from 'node:path';
 const root=path.resolve(fileURLToPath(new URL('../dist/',import.meta.url)));
 const args=process.argv.slice(2);
 const portArg=args.indexOf('--port');
-const port=Number(portArg>=0?args[portArg+1]:(process.env.PORT||5173));
+const port=Number(portArg>=0?args[portArg+1]:(process.env.PORT||5174));
 const types={'.html':'text/html; charset=utf-8','.css':'text/css; charset=utf-8','.js':'text/javascript; charset=utf-8','.json':'application/json; charset=utf-8','.png':'image/png','.jpg':'image/jpeg','.woff2':'font/woff2','.ttf':'font/ttf','.pdf':'application/pdf','.svg':'image/svg+xml'};
 const server=createServer(async(req,res)=>{
   try{

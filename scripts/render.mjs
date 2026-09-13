@@ -1,8 +1,9 @@
 import {readFile,mkdir,writeFile} from 'node:fs/promises';
+import {loadProjects} from './projects.mjs';
 
 const base=new URL('../',import.meta.url);
 const site=JSON.parse(await readFile(new URL('content/site.json',base),'utf8'));
-const projects=JSON.parse(await readFile(new URL('content/projects.json',base),'utf8'));
+const allProjects=await loadProjects();
 const esc=value=>String(value??'').replace(/[&<>"']/g,char=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[char]));
 const ext='target="_blank" rel="noopener noreferrer"';
 const links=[['resume','Resume'],['projects','Projects'],['aboutme','About Me']];
@@ -33,17 +34,12 @@ const resume=`
 <div class="experience-list">${site.workExperience.map(job=>`<article class="experience-item"><div class="experience-meta"><h3>${esc(job.company)}</h3><p>${esc(job.period)}</p></div><div class="experience-description"><h4>${esc(job.role)}</h4><ul>${job.bullets.map(b=>`<li>${esc(b)}</li>`).join('')}</ul></div></article>`).join('')}</div></section>
 <aside class="page-outro"><p>See the work behind the résumé.</p><a class="text-link" href="/projects/">Explore my projects <span aria-hidden="true">→</span></a></aside>`;
 
-// Keep uncertain team/academic attribution in the contributions section.
-// Category overrides are content decisions; no inferred authorship is added to descriptions.
-const soloIds=new Set(['coordinated-goap-agents','ping-monitor-dashboard','chatclearer-discord-bot','discord-music-bot','acsidekick-assetto-corsa-telemetry','realtime-procedural-generation']);
-const allProjects=[...projects.technicalProjects,...projects.gameProjects].sort((a,b)=>(a.priority??99)-(b.priority??99));
-const solo=allProjects.filter(project=>soloIds.has(project.id));
-const contributed=allProjects.filter(project=>!soloIds.has(project.id));
-const projectMarkup=(project,index)=>`<details class="project" id="${esc(project.id)}"><summary><span class="project-number" aria-hidden="true">${String(index+1).padStart(2,'0')}</span><span class="project-summary"><span class="project-name">${esc(project.title)}</span><span class="project-type">${esc(project.type)}</span></span><span class="project-toggle" aria-hidden="true"></span></summary><div class="project-detail"><p class="project-description">${esc(project.description)}</p>${chips(project.stack)}${project.period?`<p class="project-period">${esc(project.period)}</p>`:''}<h4>Technical work</h4><ul class="project-bullets">${project.bullets.map(b=>`<li>${esc(b)}</li>`).join('')}</ul>${project.link?`<a class="text-link" href="${esc(project.link)}" ${ext}>${project.link.includes('itch.io')?'Play on itch.io':'View source on GitHub'} <span aria-hidden="true">↗</span></a>`:''}</div></details>`;
+const projectMarkup=(project,index)=>`<details class="project" id="${esc(project.id)}"><summary><span class="project-number" aria-hidden="true">${String(index+1).padStart(2,'0')}</span><span class="project-summary"><span class="project-name">${esc(project.title)}</span><span class="project-type">${esc(project.categoryTitle)}</span></span><span class="project-toggle" aria-hidden="true"></span></summary><div class="project-detail"><p class="project-description">${esc(project.description)}</p>${project.technologies.length?chips(project.technologies):''}${project.period?`<p class="project-period">${esc(project.period)}</p>`:''}${project.technicalWork.length?`<h3>Technical work</h3><ul class="project-bullets">${project.technicalWork.map(b=>`<li>${esc(b)}</li>`).join('')}</ul>`:''}${project.sourceLink?`<a class="text-link" href="${esc(project.sourceLink)}" ${ext}>${esc(project.sourceLinkMessage?.trim()||'View source')} <span aria-hidden="true">↗</span></a>`:''}</div></details>`;
+const technicalProjects=allProjects.filter(project=>project.section!=='game');
+const gameProjects=allProjects.filter(project=>project.section==='game');
 const projectPage=`
-<div class="page-intro projects-intro"><h1 class="sr-only">Projects</h1><nav class="section-nav" aria-label="Project categories"><a href="#solo">Solo projects <span class="count">${solo.length}</span></a><a href="#contributions">Contributions <span class="count">${contributed.length}</span></a></nav></div>
-<section class="project-section" id="solo" aria-labelledby="solo-title"><h2 id="solo-title" class="sentence-title"><span class="sentence-prefix">Here are my</span> Solo Projects</h2><div class="project-list">${solo.map(projectMarkup).join('')}</div></section>
-<section class="project-section" id="contributions" aria-labelledby="contributions-title"><h2 id="contributions-title" class="sentence-title"><span class="sentence-prefix">Here are the</span> Projects <span class="sentence-suffix">I contributed to</span></h2><div class="project-list">${contributed.map(projectMarkup).join('')}</div></section>`;
+<section class="project-section" id="technical-projects" aria-labelledby="projects-title"><h1 id="projects-title" class="sentence-title"><span class="sentence-prefix">Here are my</span> Projects</h1><div class="project-list">${technicalProjects.map(projectMarkup).join('')}</div></section>
+<section class="project-section" id="game-projects" aria-labelledby="game-projects-title"><h2 id="game-projects-title" class="sentence-title"><span class="sentence-prefix">Here are my</span> Game Projects</h2><div class="project-list">${gameProjects.map(projectMarkup).join('')}</div></section>`;
 
 const education=site.education[0];
 const about=`

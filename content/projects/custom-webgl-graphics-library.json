@@ -1,0 +1,25 @@
+{
+  "id": "custom-webgl-graphics-library",
+  "order": 5,
+  "title": "Custom WebGL 3D Graphics Library",
+  "categoryTitle": "Computer graphics / WebGL engine",
+  "description": "Built a custom 3D graphics framework and demo scene directly on WebGL, implementing meshes, transforms, camera projection, lighting, animation, and interaction without three.js.",
+  "technicalWork": [
+    "Owned credited geometry work for the Box, Freddy, and Fan assets, including custom mesh generation and imported JSON meshes used in the rendered scene.",
+    "Implemented credited scaling and perspective matrix functionality, helping the engine support object transforms and projected 3D world space.",
+    "Contributed to final scene behavior and movement integration, including animated objects and keyboard-driven navigation in the WebGL canvas.",
+    "Helped build a reusable graphics architecture with mesh data, object/group transforms, camera support, shaders, and render-loop orchestration."
+  ],
+  "technologies": [
+    "JavaScript",
+    "React",
+    "Vite",
+    "WebGL",
+    "GLSL",
+    "HTML Canvas",
+    "Vitest"
+  ],
+  "sourceLinkMessage": "View source on GitHub",
+  "sourceLink": "https://github.com/lmu-cmsi3710-spring2025/our-own-3d-library-theadultsaretalking",
+  "section": "technical"
+}

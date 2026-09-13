@@ -1,0 +1,25 @@
+{
+  "id": "storyboard-connect",
+  "order": 3,
+  "title": "Storyboard Connect",
+  "categoryTitle": "Full-stack creative marketplace",
+  "description": "Built a marketplace for storyboard artists and filmmakers with portfolio profiles, filtered discovery, Google sign-in, and project applications. The current React/TypeScript app uses Vercel Functions and Supabase-hosted PostgreSQL.",
+  "technicalWork": [
+    "Built the React/TypeScript frontend with artist/filmmaker entry paths, filterable discovery grids, profile pages, cards, and detail modals.",
+    "Implemented Vercel serverless APIs for artists, projects, applications, profiles, featured content, and filter-count endpoints backed by Supabase/PostgreSQL.",
+    "Integrated Google OAuth and JWT-based auth for sign-in, persisted sessions, protected profile editing, and project application flows.",
+    "Modeled relational data for users, artists, portfolios, projects, applications, counts, indexes, and triggers, with Vitest coverage for key API utilities."
+  ],
+  "technologies": [
+    "TypeScript",
+    "React",
+    "Tailwind CSS",
+    "Vercel Functions",
+    "Supabase",
+    "PostgreSQL",
+    "Vitest"
+  ],
+  "sourceLinkMessage": "View source on GitHub",
+  "sourceLink": "https://github.com/zleodai/storyboardConnect",
+  "section": "technical"
+}

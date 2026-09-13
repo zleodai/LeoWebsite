@@ -2,6 +2,7 @@ import assert from 'node:assert/strict';
 import {readFile,readdir,stat} from 'node:fs/promises';
 import {fileURLToPath} from 'node:url';
 import path from 'node:path';
+import {loadProjects} from './projects.mjs';
 
 const root=path.resolve(fileURLToPath(new URL('../dist/',import.meta.url)));
 async function walk(directory){const result=[];for(const item of await readdir(directory,{withFileTypes:true})){const file=path.join(directory,item.name);result.push(...(item.isDirectory()?await walk(file):[file]));}return result;}
@@ -32,11 +33,13 @@ for(const [file,html] of docs){
 const css=await readFile(path.join(root,'assets/style.css'),'utf8');
 for(const [,href] of css.matchAll(/url\(['"]?([^)'"\s]+)['"]?\)/g))assert(files.includes(path.resolve(root,'.'+href)),`Missing CSS asset ${href}`);
 const projectHtml=docs.get(path.join(root,'projects/index.html'));
-assert.equal((projectHtml.match(/class="project"/g)||[]).length,16);
+const projects=await loadProjects();
+assert.equal((projectHtml.match(/class="project"/g)||[]).length,projects.length);
+for(const project of projects)assert(projectHtml.includes(`id="${project.id}"`),`Missing project ${project.id}; run npm run build`);
 assert.equal((projectHtml.match(/<details\b/g)||[]).length,(projectHtml.match(/<\/details>/g)||[]).length);
 const pdf=await readFile(path.join(root,'assets/Leo-Dai-Resume.pdf'));
 assert.equal(pdf.subarray(0,5).toString(),'%PDF-');
 const portrait=await readFile(path.join(root,'assets/headshot3.jpg'));
 assert.equal(portrait.subarray(0,3).toString('hex'),'ffd8ff');
-console.log(`PASS: ${pages.length} pages, 16 projects, ${checkedLinks} local links/assets/anchors, font, JPEG, and résumé PDF.`);
+console.log(`PASS: ${pages.length} pages, ${projects.length} projects, ${checkedLinks} local links/assets/anchors, font, JPEG, and résumé PDF.`);
 

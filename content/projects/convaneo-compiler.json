@@ -1,0 +1,24 @@
+{
+  "id": "convaneo-compiler",
+  "order": 4,
+  "title": "Convaneo: Custom Language Compiler",
+  "categoryTitle": "Compiler / programming language",
+  "description": "Built a statically typed language and JavaScript compiler using Ohm.js and Node.js. The repository also includes a separate Next.js/React showcase written in TypeScript.",
+  "technicalWork": [
+    "Implemented the compiler pipeline from grammar parsing through semantic analysis, optimization, and JavaScript code generation.",
+    "Defined language support for typed variables, functions, recursion, arrays, control flow, loops, type casts, boolean logic, and arithmetic expressions.",
+    "Built semantic checks for scope resolution, redeclarations, type compatibility, function arguments, loop-only breaks, return validation, and array indexing.",
+    "Added automated parser, analyzer, generator, optimizer, and compiler tests covering valid programs, semantic errors, generated JavaScript, and constant-folding behavior."
+  ],
+  "technologies": [
+    "JavaScript",
+    "Node.js",
+    "Ohm.js",
+    "Next.js",
+    "React",
+    "TypeScript"
+  ],
+  "sourceLinkMessage": "View source on GitHub",
+  "sourceLink": "https://github.com/evansteinho/Convaneo",
+  "section": "technical"
+}

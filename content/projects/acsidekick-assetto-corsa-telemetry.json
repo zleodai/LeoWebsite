@@ -1,0 +1,23 @@
+{
+  "id": "acsidekick-assetto-corsa-telemetry",
+  "order": 9,
+  "title": "ACSidekick Telemetry Plugin",
+  "categoryTitle": "Game telemetry / mod tooling",
+  "description": "Built an Assetto Corsa Lua app with an in-game telemetry panel and car-centered track map, alongside a prototype Go/SQLite backend for telemetry storage and queries.",
+  "technicalWork": [
+    "Implemented the Assetto Corsa app manifest and Lua callback lifecycle for window rendering, UI pre-rendering, and simulation update hooks.",
+    "Built reusable UI primitives for transparent panels, centered text, image rendering, click handling, custom fonts, and rotating map assets.",
+    "Mapped live car position and heading onto Assetto Corsa track map assets using map.ini scaling/offset data, with mouse-wheel zoom support.",
+    "Added collect/unlink controls and prototype CSV streaming through LuaSocket, alongside a separate Go HTTP service for SQLite storage and queries."
+  ],
+  "technologies": [
+    "Lua",
+    "Go",
+    "SQLite",
+    "Custom Shaders Patch",
+    "LuaSocket"
+  ],
+  "sourceLinkMessage": "View source on GitHub",
+  "sourceLink": "https://github.com/zleodai/ACSidekick",
+  "section": "technical"
+}

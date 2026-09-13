@@ -1,0 +1,16 @@
+{
+  "id": "realtime-procedural-generation",
+  "order": 15,
+  "title": "Realtime Procedural Generation",
+  "categoryTitle": "Real-time rendering",
+  "description": "Built a Unity prototype that generates terrain at runtime and updates world chunks as the player moves.",
+  "technicalWork": [
+    "Used Unity Terrain for runtime environment generation.",
+    "Organized world updates around terrain chunks during play."
+  ],
+  "technologies": [
+    "C#",
+    "Unity"
+  ],
+  "section": "technical"
+}

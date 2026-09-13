@@ -1,0 +1,24 @@
+{
+  "id": "unstable",
+  "order": 1.5,
+  "title": "Unstable",
+  "categoryTitle": "3D game jam / Unity Windows game",
+  "description": "A Unity chase game with physics-based movement, escalating enemy pressure, and chunked procedural terrain. World generation uses Burst/Jobs and pooled terrain and structures.",
+  "technicalWork": [
+    "Built a Rigidbody-based horse controller with sprinting, jumping, mouse-look camera targeting, follow-direction steering, and speed/jump scaling by player level.",
+    "Implemented the progression loop: pickups increase a decaying resource, trigger level changes, swap music layers, update UI bars, and drive the win/fail sequence.",
+    "Created wanted-level enemy escalation with spawn caps, weighted enemy selection, culling, score rewards, darts, goo slow effects, cop-car knockback, and UI star feedback.",
+    "Developed chunked procedural terrain using Perlin height maps, Burst/Jobs smoothing, terrain/detail/tree placement, structure collision spacing, and pooled terrain/structure reuse."
+  ],
+  "technologies": [
+    "C#",
+    "Unity",
+    "Cinemachine",
+    "Unity Behavior",
+    "Burst",
+    "Unity Jobs"
+  ],
+  "sourceLinkMessage": "Play on itch.io",
+  "sourceLink": "https://law47.itch.io/unstable",
+  "section": "game"
+}

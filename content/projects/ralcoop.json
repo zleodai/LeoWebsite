@@ -1,0 +1,23 @@
+{
+  "id": "ralcoop",
+  "order": 0,
+  "title": "RALCOOP",
+  "categoryTitle": "96-hour game jam / 3D first-person action-puzzle",
+  "description": "A Unity first-person action-puzzle game with a timestamp-based rewind system for NPCs and physics objects. Players restore earlier states to solve timing, combat, and traversal encounters.",
+  "technicalWork": [
+    "Built a timestamp-based rewind framework for NPCs and physics objects, restoring position, rotation, velocity, health, AI steps, and activation state during reverse playback.",
+    "Implemented first-person movement, camera look, sprint/crouch/jump, pickup/drop interactions, ammo collection, reload flow, recoil, tracers, and hit effects.",
+    "Scripted NavMesh enemy agents with patrol/instruction sequences, FOV and line-of-sight raycasts, alert propagation, combat states, animations, and rewind-safe freezing/restoration.",
+    "Created rewind-aware level objects including timed doors, falling rocks, physics boxes, explosive props, HUD clock/playback indicators, pause flow, and audio feedback."
+  ],
+  "technologies": [
+    "C#",
+    "Unity",
+    "WebGL",
+    "NavMesh",
+    "Input System"
+  ],
+  "sourceLinkMessage": "Play on itch.io",
+  "sourceLink": "https://law47.itch.io/ralcoop",
+  "section": "game"
+}

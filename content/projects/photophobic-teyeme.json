@@ -1,0 +1,23 @@
+{
+  "id": "photophobic-teyeme",
+  "order": 1,
+  "title": "Photophobic Teyeme",
+  "categoryTitle": "48-hour game jam / 2D action-stealth game",
+  "description": "A 48-hour Unity action-stealth game with wall-gripping movement, a charge-limited time-slowing ability, and GOAP-driven guards. Players escape containment by navigating surfaces and managing their eye power.",
+  "technicalWork": [
+    "Implemented wall-adjacent movement with Rigidbody2D physics, surface trigger detection, gravity toggling, and pooled tendril particle attachments.",
+    "Built a charge-based eye mechanic that drains/recharges, slows global time, boosts player responsiveness, and drives vignette, UI, and audio feedback.",
+    "Created factory-composed enemy behaviors using sensors, beliefs, goals, actions, and a GOAP-style planner for patrol, chase, shooting, melee, and idle states.",
+    "Shipped HUD/menu flow with Input System events, health/eye bars, pause/restart/menu routing, and an escape/end-state typing sequence."
+  ],
+  "technologies": [
+    "C#",
+    "Unity",
+    "URP",
+    "Input System",
+    "Tilemap"
+  ],
+  "sourceLinkMessage": "Play on itch.io",
+  "sourceLink": "https://law47.itch.io/photophobic-teyeme",
+  "section": "game"
+}
