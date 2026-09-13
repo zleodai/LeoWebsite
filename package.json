@@ -1,45 +1,14 @@
 {
-  "name": "pokefinder",
-  "version": "0.1.0",
+  "name": "leo-portfolio",
+  "version": "1.0.0",
   "private": true,
-  "dependencies": {
-    "lucide-react": "^1.41.0",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "react-scripts": "5.0.1",
-    "web-vitals": "^2.1.4"
-  },
+  "type": "module",
+  "description": "Leo Dai's portfolio, based on the Portfolio Website Figma Sites framework.",
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "playwright test --config=src/tests/playwright.config.js",
-    "test:headed": "playwright test --config=src/tests/playwright.config.js --headed",
-    "test:ui": "playwright test --config=src/tests/playwright.config.js --ui",
-    "test:install": "playwright install chromium",
-    "eject": "react-scripts eject"
+    "dev": "node scripts/render.mjs && node scripts/serve.mjs",
+    "start": "node scripts/serve.mjs",
+    "build": "node scripts/render.mjs",
+    "check": "node scripts/check.mjs"
   },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
-  },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
-  },
-  "devDependencies": {
-    "@playwright/test": "^1.60.0",
-    "css-minimizer-webpack-plugin": "^3.4.1",
-    "file-loader": "^6.2.0",
-    "url-loader": "^4.1.1"
-  }
+  "engines": { "node": ">=20" }
 }
